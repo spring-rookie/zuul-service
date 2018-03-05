@@ -1,0 +1,15 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: zuul-service
+
+  profiles:
+    active:
+      dev
+
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8888
