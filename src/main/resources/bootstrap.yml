@@ -11,6 +11,5 @@ spring:
 
   cloud:
     config:
-      overrideNone: true
       enabled: true
       uri: http://localhost:8888
