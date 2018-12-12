@@ -13,3 +13,18 @@ spring:
     config:
       enabled: true
       uri: http://localhost:8888
+
+zuul:
+  prefix: /api
+  routes:
+    test:
+      path: /redirect/**
+      url: http://google.com
+    customer-by-address:
+      path: /customer-by-address/**
+      url: http://localhost:9098
+    customer-by-service:
+      path: /customer-by-service/**
+      serviceId: CUSTOMER-SERVICE
+    static:
+      path: /static/**
